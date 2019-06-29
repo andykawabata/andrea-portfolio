@@ -1,0 +1,74 @@
+#staticPageWrapper{
+    margin: 40px 40px 0px 185px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
+
+#staticPageWrapper * {
+    font-family: inherit;
+    font-weight: inherit;
+    
+
+}
+
+#staticPageWrapper h3{
+    text-align: center;
+    font-size: 1.8em;
+    letter-spacing: .03em;
+    margin-bottom: 25px;
+    
+}
+
+strong { font-weight: bold !important; }
+
+#staticPageWrapper h4{
+    
+    font-size: 1.4em;
+    
+}
+#staticPageWrapper p{
+    
+
+    font-size: 1.15em;
+    margin-left: 40px;
+    color: #777;
+    
+}
+
+#contactWrapper p{
+
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    
+}
+
+
+@media only screen and (max-width: 800px){
+    
+    #staticPageWrapper{
+        margin: 0;
+        padding: 20px;
+        padding-top: 0;
+        
+    }
+
+    #staticPageWrapper h3{
+        text-align: center;
+        font-size: 1.8em;
+        letter-spacing: .03em;
+        margin-bottom: 25px;
+        
+        
+    }
+
+
+    #staticPageWrapper p{
+    
+
+        font-size: 1.15em;
+        margin-left: 20px;
+        
+    }
+}

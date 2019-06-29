@@ -1,0 +1,48 @@
+body {
+    font: normal 14px Verdana, Arial, sans-serif;
+
+}
+
+#navWrapper{
+    background: lightgreen;
+}
+#navWrapper ul{
+    list-style: none;
+    padding: none;
+
+}
+
+#navWrapper ul li{
+    display: inline-block;
+    padding: 10px 25px 10px 0;
+}
+
+
+#navWrapper a{
+
+    text-decoration: none;
+}
+
+#uploadForm{
+    background: lightcoral;
+    
+
+}
+#uploadForm h4{
+    padding: 12px 0 25px 0;
+    
+
+}
+
+#directions p{
+    display: inline-block;
+
+}
+
+#chooseFile{
+    width: 255px;
+}
+
+#createAlbum{
+    background: lightblue;
+}
