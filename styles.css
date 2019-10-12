@@ -144,6 +144,11 @@ a{
     color: #8e959f;
 }
 
+#logo a h1{
+    text-decoration: none;
+    color: black;
+}
+
 #firstNav li {
     line-height: 1.25em;
     font-size: 16.5px;

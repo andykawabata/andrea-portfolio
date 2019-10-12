@@ -11,38 +11,38 @@ if(empty($_POST['album-name']) or empty($_FILES['files']['name'][0])){
   header("Location: upload.php");
 }
 else{
-$albumName = $_POST['album-name'];
-$albumNameUnderscore = str_replace(' ', '_', $_POST['album-name']);
+    $albumName = $_POST['album-name'];
+    $albumNameUnderscore = str_replace(' ', '_', $_POST['album-name']);
 
 
 
 
-//declare variables
-$indexes_with_ext_error = array();
-$indexes_with_php_error = array();
-$i = 0;
-$ext_error = false;
-$query = "INSERT INTO ".$albumNameUnderscore." (name, path) VALUES ('pic','/path')";
-$names_array = $_FILES['files']['name'];
-$errors_array = $_FILES['files']['error'];
-$indexes_with_php_error_and_code = [];
-$tmp_name_array = $_FILES['files']['tmp_name'];
-$extentions = array('jpg','jpeg','gif','png');
-$existing_names_array = scandir("../img/");
-$duplicate = false;
-$duplicate_name;
+    //declare variables
+    $indexes_with_ext_error = array();
+    $indexes_with_php_error = array();
+    $i = 0;
+    $ext_error = false;
+    $query = "INSERT INTO ".$albumNameUnderscore." (name, path) VALUES ('pic','/path')";
+    $names_array = $_FILES['files']['name'];
+    $errors_array = $_FILES['files']['error'];
+    $indexes_with_php_error_and_code = [];
+    $tmp_name_array = $_FILES['files']['tmp_name'];
+    $extentions = array('jpg','jpeg','gif','png');
+    $existing_names_array = scandir("../img/");
+    $duplicate = false;
+    $duplicate_name;
 
-foreach($names_array as $new_name){
-    foreach($existing_names_array as $existing_name){
-        if($new_name == $existing_name){
-            $duplicate = true;
-            $duplicate_name = $new_name;
-            break;
+    foreach($names_array as $new_name){
+        foreach($existing_names_array as $existing_name){
+            if($new_name == $existing_name){
+                $duplicate = true;
+                $duplicate_name = $new_name;
+                break;
+            }
         }
     }
-}
 
-//check for php and ext errors
+    //check for php and ext errors
     for($i = 0; $i < count($names_array); $i++){
         //isolate file extention 
         $exploded_array = explode('.', $names_array[$i] );

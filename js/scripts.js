@@ -51,13 +51,26 @@ $(document).ready(
 
 //active link
 var url = document.URL;
-let links = document.getElementsByClassName('nav-link');
-for(var i = 0; i < links.length; i++){
-    if(links[i].href === url){
-        links[i].style.color = "black";
-    }
-    
-}   
+let linksDesktop = $("#desktopNav .nav-link")
+let linksMobile = $("#mobileNav .nav-link")
+for(var i = 0; i < linksDesktop.length; i++){
+    if(linksDesktop[i].href === url){
+        linksDesktop[i].style.color = "black";
+        linksMobile[i].style.color = "black";
+
+    }   
+}
+    //account for landing page
+function getBaseUrl() {
+    var re = new RegExp(/^.*\//);
+    return re.exec(window.location.href);
+}
+baseURL = getBaseUrl()[0];
+if(url === baseURL){
+    linksDesktop[0].style.color = "black";
+    linksMobile[0].style.color = "black";
+}
+
             
 //slideshow code
 let pics = document.getElementsByClassName("slide");
