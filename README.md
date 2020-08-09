@@ -1,2 +1,2 @@
-# andrea-portfolio-2.0
+# andrea-portfolio
 a portfolio website for my friend
